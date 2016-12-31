@@ -1,0 +1,17 @@
+Day 1:
+Built the circuit.
+Making sure the circuit works:
+  1) Protection circuit:
+    Goal: It should make ground any voltage that is greater than 0.4V. 
+    Test: Plugged in 5V to the electrode side and measured 0.3V on the end going to the circuit. I also plugged in 5V in from the circuit side and measured 1.3V going to the electrode
+    Result: Not working as expected
+  2) Instrumentation Amplifer 
+    Goal: If plugged in correctly, it should give a gain of 26
+    Test: Input of 0.1V and measured ~2.5V output
+    Result: Plugged in correctly and working
+  3) High Pass Filter
+    Goal: Filter out DC offset
+    Test: Plugged in DC 5V and measured  0.02V at the output
+    Result: success
+  4)Inverting Op Amp
+  
