@@ -14,4 +14,12 @@ Making sure the circuit works:
     Test: Plugged in DC 5V and measured  0.02V at the output
     Result: success
   4)Inverting Op Amp
+
+
+Software update:
+  1. copied the main code chucks from the EEG guys, this is now part of main code 'read_serial.m'. 
+  2. created 'predict.m' which predict state based on logistical regression output.
+  3. created 'waveAnalyze.m' which filter wave based on three wave band and output three index representing mean intensity of the three waves
+  4. created 'sigmoid.m' which calculate the logistic regression model probability.
+  5. Hardware Wiring Diagram is the LT spice file of hardware drawing
   
