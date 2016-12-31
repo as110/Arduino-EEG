@@ -1,6 +1,16 @@
 %==================training model goes here================================
+data = load('trainingData.txt');
+X = data(:, [1, 2, 3]); y = data(:, 4);
+[m, n] = size(X);
+X = [ones(m,1) X];
+initial_theta = zeros(n + 1, 1);
+[cost, grad] = costFunction(initial_theta, X, y);
+options = optimset('GradObj', 'on', 'MaxIter', 400);
 
-
+%  Run fminunc to obtain the optimal theta
+%  This function will return theta and the cost 
+[theta, cost] = ...
+	fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
 %==================read in data ===========================================
 % settings
 SerialPort='com3'; % serial port
