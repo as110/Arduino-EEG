@@ -18,8 +18,10 @@ Making sure the circuit works:
     Test: Plug in DC 0.09V and measured 7.82V
     Result: pretty successful
   5)Low Pass Filter: did not test because the process involves complicated code to make Arduino into a Function Generator and Oscilloscope. 
-
-
+  6) Optoisolator: Weird distortion and decrementing of the DC test signal. Decided to not use optoisolator because research revealed that it works best with a digital signal and I can’t get the digital signal and isolate it and then serial bus it into the computer. 
+   
+Testing:
+Trial 1: Learned that I was doing hella clipping. I need to step down the gain on the other resistor
 
 Software update:
   1. copied the main code chucks from the EEG guys, this is now part of main code 'read_serial.m'. 
